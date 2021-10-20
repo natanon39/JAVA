@@ -1,14 +1,10 @@
 package exam;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-//CREATE PRIME FUNCTION (input = int[], output = prime int[])
-=======
 //CREATE PRIME FUNCTION (input = int[], output = prime int[]) and show results
->>>>>>> 3eb8800d49f2dc25b0852c0a246a509fc326a7cb
 public class exam1 {
     public static void main(String[] args) {
         int[] input = { -3, 0, 1, 2, 3, 5, 7, 9, 13 };
