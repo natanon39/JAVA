@@ -3,15 +3,37 @@ package exam;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
-//CREATE PRIME FUNCTION (input = int[], output = prime int[])
+//CREATE PRIME FUNCTION (input = int[], output = prime int[]) and show results
 public class exam1 {
     public static void main(String[] args) {
-        int[] input = { -3, 0, 1, 2, 3, 5, 7, 9, 13 };
+        int[] input = getNumber();
         if (prime(input) == null) {
             System.out.println("NULL");
         } else
             System.out.println(Arrays.toString(prime(input)));
+    }
+
+    public static int[] getNumber() {
+        Scanner s = new Scanner(System.in);
+        List<Integer> output = new ArrayList<Integer>();
+        while (true) {
+            System.out.println("Enter number : ");
+            try {
+                output.add(Integer.parseInt(s.nextLine()));
+            } catch (Exception e) {
+                System.out.println("Enter only int");
+            }
+            System.out.println("Add next? Y or N : ");
+            String check = s.nextLine();
+            if (check.equals("N")) {
+                System.out.println(check);
+                break;
+            }
+        }
+        s.close();
+        return output.stream().mapToInt(i -> i).toArray();
     }
 
     public static int[] prime(int[] input) {
